@@ -1,0 +1,37 @@
+.contact {
+    max-width:500px;
+}
+
+.form-control:focus {
+    border-color: #ee6c4d;
+    box-shadow: none;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+
+
+
+
+
+.formpost {
+    margin-bottom:1rem;
+}
+
+.form-auth {
+    width: 100%;
+}
+
+.form-label-group {
+    margin-bottom: 1rem;
+}
+
+.form-label-group input{
+    border-radius: 2rem;
+}
+
+.postNew{
+    float:right;
+}

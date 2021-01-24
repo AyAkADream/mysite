@@ -1,0 +1,18 @@
+.link-color {
+    color: #ee6c4d;
+}
+
+.line-color:hover {
+    color:#c56c55;
+    text-decoration: none;
+}
+
+.project{
+    padding-top: 30px;
+    padding-left: 30px;
+}
+.project p{
+    padding-top: 10px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+}

@@ -1,0 +1,14 @@
+/*ログイン,ログアウト*/
+.form-auth {
+    width: 100%;
+}
+
+/*ログイン*/
+.form-label-group {
+    margin-bottom: 1rem;
+}
+
+/*ログイン*/
+.form-label-group input {
+    border-radius: 2rem;
+}

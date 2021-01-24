@@ -1,0 +1,19 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+
+<div class="col-sm-8 mb-5">
+    <h4 class="mt-4 mb-3">タイトル{{ dream_data.title }}</h4>
+    <p>{{ dream_data.short_description |linebreaksbr }}</p>
+    <div class="project">
+        <h5>意識していること</h5>
+        <p>{{ dream_data.consciousness |linebreaksbr }}</p>
+        <h5>説明</h5>
+        <p>{{ dream_data.description |linebreaksbr }}</p>
+    </div>
+</div>
+</div>
+
+
+
+{% endblock %}
