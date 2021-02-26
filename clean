@@ -1,0 +1,35 @@
+if [ "$1" = "create" ]; then
+
+DIR=`pwd`
+find $DIR/myvenv/venv36-d30/lib64/python3.6/site-packages  $DIR/app $DIR/accounts $DIR/blog mysite  -print |grep -e __pycache__ -e 00??_initial.py -e 00??_auto_*.py  | grep -v /__pycache__/ | awk '{ print "rm -rf", $1 }' > aaaaa
+
+else
+
+rm -rf config/__pycache__
+rm -rf app/__pycache__
+rm -rf accounts/__pycache__
+rm -rf blog/__pycache__
+rm -rf templatetags/__pycache__
+
+rm -f  accounts/migrations/000?_initial.py
+rm -f  accounts/migrations/000?_auto_*.py
+rm -f  accounts/migrations/000?_*.py
+rm -rf accounts/migrations/__pycache__
+
+rm -f  blog/migrations/000?_initial.py
+rm -f  blog/migrations/000?_auto_*.py
+rm -f  blog/migrations/000?_*.py
+rm -rf blog/migrations/__pycache__
+
+rm -f  app/migrations/000?_initial.py
+rm -f  app/migrations/000?_auto_*.py
+rm -f  app/migrations/000?_*.py
+rm -rf app/migrations/__pycache__
+
+rm -f  config/migrations/000?_initial.py
+rm -f  config/migrations/000?_auto_*.py
+rm -f  config/migrations/000?_*.py
+rm -rf config/migrations/__pycache__
+
+fi
+
