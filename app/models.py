@@ -20,6 +20,19 @@ class Profile(models.Model):
 
     def __str__(self):
         return self.name
+
+#class Top(models.Model):
+    #title = models.CharField('タイトル' , max_length=100, null=True , blank = True)
+    #title_1 = models.CharField('タイトル1' , max_length=100, null=True , blank = True)
+    #movieUrl_1 = models.CharField('MovieURL1' , max_length=100 , null=True, blank=True)
+    #title_2 = models.CharField('タイトル2' , max_length=100, null=True , blank = True)
+    #movieUrl_2 = models.CharField('MovieURL2' , max_length=100 , null=True, blank=True)
+    #title_3 = models.CharField('タイトル3' , max_length=100, null=True , blank = True)
+    #movieUrl_3 = models.CharField('MovieURL3' , max_length=100 , null=True, blank=True)
+
+    #def __str__(self):
+        #return self.title
+
 class Skill(models.Model):
     title = models.CharField('タイトル' , max_length=100)
     image = models.ImageField(upload_to='images' , verbose_name='イメージ画像')

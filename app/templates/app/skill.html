@@ -2,6 +2,8 @@
 
 {% block content %}
 
+<h2>作品集</h2>
+<br>
 <div class="row mb-5">
     {% for work in work_data %}
         <div class="col-6 col-md-3 mb-3">
@@ -26,11 +28,15 @@
     {% for experience in experience_data %}
         <hr>
         <div class="d-flex justify-content-between">
-            <h5>{{ experience.skill_name }}</h5>
         </div>
         <p class="mb-1">{{ experience.urll }}</p>
+        <h5>{{ experience.skill_name }}について</h5>
         <p>{{ experience.description | linebreaksbr }}</p>
+        <hr>
+        <h5>苦手・得意</h5>
         <p>{{ experience.goodBad | linebreaksbr }}</p>
+        <hr>
+        <h5>次の目標</h5>
         <p>{{ experience.aim | linebreaksbr }}</p>
         <hr>
     {% endfor %}
