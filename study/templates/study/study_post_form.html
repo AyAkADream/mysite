@@ -1,0 +1,101 @@
+{% extends "app/base.html" %}
+{% load widget_tweaks %}
+
+{% block content %}
+
+<div class="my-4">
+    <h2>新たに読んだ論文</h2>
+</div>
+
+<form method="post">
+    {% csrf_token %}
+    <div class="formpost">
+        {% render_field study_form.title class="form-control" placeholder="タイトル" %}
+    </div>
+
+    <div class="formpost">
+        {% render_field study_form.author class="form-control" placeholder="著者と所属のリスト" %}
+    </div>
+
+    <div class="formpost">
+        {% render_field study_form.content class="form-control" placeholder="どんなもの？" %}
+    </div>
+
+    <div class="formpost">
+        {% render_field study_form.url1_title class="form-control" placeholder="URL1のタイトル" %}
+    </div>
+
+    <div class="formpost">
+        {% render_field study_form.url1 class="form-control" placeholder="URL1" %}
+    </div>
+
+    <div class="formpost">
+        {% render_field study_form.url2_title class="form-control" placeholder="URL2のタイトル" %}
+    </div>
+
+    <div class="formpost">
+        {% render_field study_form.url2 class="form-control" placeholder="URL2" %}
+    </div>
+
+    <div class="formpost">
+        {% render_field study_form.url3_title class="form-control" placeholder="URL3のタイトル" %}
+    </div>
+
+    <div class="formpost">
+        {% render_field study_form.url3 class="form-control" placeholder="URL3" %}
+    </div>
+
+    <div class="formpost">
+        {% render_field study_form.url4_title class="form-control" placeholder="URL4のタイトル" %}
+    </div>
+
+    <div class="formpost">
+        {% render_field study_form.url4 class="form-control" placeholder="URL4" %}
+    </div>
+
+    <div class="formpost">
+        {% render_field study_form.image1 class="form-control" placeholder="イメージ画像1" %}
+    </div>
+
+    <div class="formpost">
+        {% render_field study_form.image2 class="form-control" placeholder="イメージ画像2" %}
+    </div>
+
+    <div class="formpost">
+        {% render_field study_form.image3 class="form-control" placeholder="イメージ画像3" %}
+    </div>
+
+    <div class="formpost">
+        {% render_field study_form.image4 class="form-control" placeholder="イメージ画像4" %}
+    </div>
+
+    <div class="formpost">
+        {% render_field study_form.comparison class="form-control" placeholder="先行研究と比べてどこがすごい？" %}
+    </div>
+
+    <div class="formpost">
+        {% render_field study_form.key class="form-control" placeholder="技術や手法のキモはどこ？" %}
+    </div>
+
+    <div class="formpost">
+        {% render_field study_form.experiment class="form-control" placeholder="どうやって有効だと検証した？" %}
+    </div>
+
+    <div class="formpost">
+        {% render_field study_form.discussion class="form-control" placeholder="議論はある？" %}
+    </div>
+
+    <div class="formpost">
+        {% render_field study_form.next_paper class="form-control" placeholder="次に読むべき論文は？" %}
+    </div>
+
+    <div class="formpost">
+        {% render_field study_form.thoughts class="form-control" placeholder="この論文について、どう思う？" %}
+    </div>
+
+    <div class="formpost">
+        {% render_field study_form.memo class="form-control" placeholder="その他・メモ" %}
+    </div>
+    <button class= "btn btn-warning" type="submit">投稿する</button>
+</form>
+{% endblock %}

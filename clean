@@ -9,6 +9,7 @@ rm -rf config/__pycache__
 rm -rf app/__pycache__
 rm -rf accounts/__pycache__
 rm -rf blog/__pycache__
+rm -rf study/__pycache__
 rm -rf templatetags/__pycache__
 
 rm -f  accounts/migrations/000?_initial.py
@@ -25,6 +26,11 @@ rm -f  app/migrations/000?_initial.py
 rm -f  app/migrations/000?_auto_*.py
 rm -f  app/migrations/000?_*.py
 rm -rf app/migrations/__pycache__
+
+rm -f  study/migrations/000?_initial.py
+rm -f  study/migrations/000?_auto_*.py
+rm -f  study/migrations/000?_*.py
+rm -rf study/migrations/__pycache__
 
 rm -f  config/migrations/000?_initial.py
 rm -f  config/migrations/000?_auto_*.py

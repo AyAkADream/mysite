@@ -1,0 +1,103 @@
+{% extends "app/base.html" %}
+{% load widget_tweaks %}
+
+{% block content %}
+
+    <h2 class='my-4'>{{ study_post_data.title }}</h2>
+    <hr>
+    <p>{{ study_post_data.author|linebreaksbr }}</p>
+    <hr>
+    <p>{{ study_post_data.created }}</p>
+    <hr>
+
+    {% if study_post_data.content %}
+        <p>{{ study_post_data.content|linebreaksbr }}</p>
+    {% endif %}
+
+    {% if study_post_data.url1_title %}
+        <p>{{ study_post_data.url1_title|linebreaksbr }}</p>
+    {% endif %}
+
+    {% if study_post_data.url1 %}
+        <!--<a>{ { study_post_data.url1|linebreaksbr } }</a> -->
+        <a href="{{ study_post_data.url1 }}">こちらから</a>
+    {% endif %}
+
+    {% if study_post_data.url2_title %}
+        <p>{{ study_post_data.url2_title|linebreaksbr }}</p>
+    {% endif %}
+
+    {% if study_post_data.url2 %}
+        <!-- <a>{{ study_post_data.url2|linebreaksbr }}</a> -->
+        <a href="{{ study_post_data.url2 }}">こちらから</a>
+    {% endif %}
+
+    {% if study_post_data.url3_title %}
+        <p>{{ study_post_data.url3_title|linebreaksbr }}</p>
+    {% endif %}
+
+    {% if study_post_data.url3 %}
+        <a>{{ study_post_data.url3|linebreaksbr }}</a>
+    {% endif %}
+
+    {% if study_post_data.url4_title %}
+        <p>{{ study_post_data.url4_title|linebreaksbr }}</p>
+    {% endif %}
+
+    {% if study_post_data.url4 %}
+        <a>{{ study_post_data.url4|linebreaksbr }}</a>
+    {% endif %}
+
+    {% if study_post_data.image1 %}
+        <img src="{{ study_post_data.image1.url }}" alt="" width="100px">
+    {% endif %}
+
+    {% if study_post_data.image2 %}
+        <img src="{{ study_post_data.image2.url }}" alt="" width="100px">
+    {% endif %}
+
+    {% if study_post_data.image3 %}
+        <img src="{{ study_post_data.image3.url }}" alt="" width="100px">
+    {% endif %}
+
+    {% if study_post_data.image4 %}
+        <img src="{{ study_post_data.image4.url }}" alt="" width="100px">
+    {% endif %}
+
+    {% if study_post_data.comparison %}
+        <p>{{ study_post_data.comparison|linebreaksbr }}</p>
+    {% endif %}
+
+    {% if study_post_data.key %}
+        <p>{{ study_post_data.key|linebreaksbr }}</p>
+    {% endif %}
+
+    {% if study_post_data.experiment %}
+        <p>{{ study_post_data.experiment|linebreaksbr }}</p>
+    {% endif %}
+
+    {% if study_post_data.discussion %}
+        <p>{{ study_post_data.discussion|linebreaksbr }}</p>
+    {% endif %}
+
+    {% if study_post_data.next_paper %}
+        <p>{{ study_post_data.next_paper|linebreaksbr }}</p>
+    {% endif %}
+
+    {% if study_post_data.thoughts %}
+        <p>{{ study_post_data.thoughts|linebreaksbr }}</p>
+    {% endif %}
+
+    {% if study_post_data.memo %}
+        <p>{{ study_post_data.memo|linebreaksbr }}</p>
+    {% endif %}
+
+    {% if user.is_authenticated %}
+    <hr>
+    <div class="d-flex mb-5">
+        <a href="{% url 'study_post_edit' study_post_data.id %}" class="btn btn-warning mr-2">編集する</a>
+        <a href="{% url 'study_post_delete' study_post_data.id %}" class="btn btn-danger mr-2">削除する</a>
+        <a href="{% url 'study_index' %}" class="btn btn-info">一覧へ戻る</a>
+    </div>
+    {% endif %}
+{% endblock %}
