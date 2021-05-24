@@ -16,3 +16,14 @@
     padding-bottom: 30px;
     padding-left: 50px;
 }
+
+@media (max-width: 858px){
+    .image-vw{
+        display: none;
+    }
+
+    .youtubeurl{
+        width: 100%;
+        height: fit-content;
+    }
+}

@@ -1,17 +1,37 @@
 .overlay {
     position: absolute;
+    top: -200px;
 }
 
 .title {
     background-color: black;
-    font-size: 4rem;
+    font-size: 420%;
     text-shadow:0 0 20px #ff0;
 }
 
 .subtitle {
     background-color: black;
-    font-size: 2rem;
+    font-size: 210%;
     text-shadow:0 0 20px #ff0;
+}
+
+@media (max-width: 858px){
+    .overlay {
+        position: absolute;
+        top: -120px;
+    }
+
+    .title {
+        background-color: black;
+        font-size: 200%;
+        text-shadow:0 0 20px #ff0;
+    }
+
+    .subtitle {
+        background-color: black;
+        font-size: 80%;
+        text-shadow:0 0 20px #ff0;
+    }
 }
 
 .work-thumbnail {

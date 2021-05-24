@@ -26,7 +26,7 @@ class ProfileEditView(LoginRequiredMixin,View):
                 'first_name' : user_data.first_name,
                 'last_name' : user_data.last_name,
                 #'department_name' : user_data.department,
-                'desceiption' : user_data.description,
+                'description' : user_data.description,
                 'image' : user_data.image,
             }
         )

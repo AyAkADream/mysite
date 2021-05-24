@@ -1,0 +1,46 @@
+{% extends "app/base.html" %}
+
+{% block content %}
+    <div class="row my-4">
+        <div class="col-md-8">
+            <table class="osare5-table col5t">
+                <tr>
+                    <th>タイトル</th>
+                    <th>著者と所属のリスト</th>
+                    <th>作成日</th>
+                    <th>詳細</th>
+                </tr>
+                        
+                <tbody>
+                    {% for post in study_post_data %}
+                        <tr>
+                            <td>{{ post.title  | truncatechars:50 }}</td>
+                            <td>{{ post.author | truncatechars:50 }}</td>
+                            <td>{{ post.created|date }}</td>
+                            <td><div class="btn btn-warning">詳細</div></td>
+                            <a href="{% url 'study_post_detail' post.id %}" class="stretched-link"></a>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <h5 class="card-header">参考文献</h5>
+                <div class="card-body">
+                    <p>過去に読んだ論文</p>
+                    <p class="mb-0">
+                        
+                        <br>
+                        過去に読んだ論文をまとめています。
+                        <br>
+                        
+                    </p>
+                    <a class="postNew mt-3" href="{% url 'study_post_new'　%}"><button type="button" class="btn btn-info">NEW PAPER</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

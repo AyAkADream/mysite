@@ -1,15 +1,15 @@
 {% extends 'app/base.html' %}
 
 {% block content %}
-
+<br>
 <h3 class="mb-4">{{ work_data.title }}</h3>
 <div class="card top mb-4">
-    <img src="{{ work_data.image.url }}" alt="">
+    <img  class="image-vw" src="{{ work_data.image.url }}" alt="">
 </div>
 
 <div class="row">
     <div class="col-sm-4 mb-4">
-        <h4 class="mt-4 mb-3">INFORMATION</h4>
+        <h4 class="mb-3">INFORMATION</h4>
         <p>
             <i class="fas fa-laptop-code mr-2"></i>
             <span class="font-weight-bolder">SKILLS:</span>
@@ -35,11 +35,12 @@
         </p>
         
     </div>
+    
     <div class="col-sm-8 mb-5">
         <h4 class="mt-4 mb-3">PROJECT DESCRIPTION</h4>
         <p>{{ work_data.skillDescription|linebreaksbr }}</p>
         {% if work_data.movieUrl %}
-            <iframe width="700" height="415" 
+            <iframe class="youtubeurl" width="700" height="445" 
             src="{{ work_data.movieUrl }}"
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -48,7 +49,8 @@
                 
         {% endif %}
 
-        <h4>{{ work_data.worksTitle }} <span class="small text-secondary">--{{ work_data.numberOfPeople }}開発--</span></h4>
+        <h4>{{ work_data.worksTitle }}</h4>
+        <h6 class="text-secondary">--{{ work_data.numberOfPeople }}開発--</h6>
         <div class="project">
             <h5>作品説明</h5>
             <p>{{ work_data.worksDescription |linebreaksbr }}</p>

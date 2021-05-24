@@ -2,12 +2,14 @@
 
 {% block content %}
 
+<br>
+
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
+    <!-- <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
+    </ol> -->
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img class="d-block  w-100" src="{{ profile_data.topimage1.url }}" alt="">
@@ -29,15 +31,15 @@
     </a>
 </div>
 
-<div class="card top d-flex-column justify-content-end mb-5">
-    <!-- <img src="{{ profile_data.topimage.url }}" alt=""> --->
-    <div class="overlay text-white p-5">
-        <h1 class="title">{{profile_data.title}}</h1>
-        <h5 class="subtitle">{{profile_data.subtitle}}</h5>
-    </div>
+<div class="card justify-content-end mb-3">
+  <img src="{{ profile_data.topimage.url }}" alt=""> 
+  <div class="overlay text-white p-5">
+    <h1 class="title">{{profile_data.title}}</h1>
+     <h5 class="subtitle">{{profile_data.subtitle}}</h5>
+  </div>
 </div>
 
-<div class="row mb-5">
+<div class="row">
     {% for skill in skill_data %}
         <div class="col-6 col-md-3 mb-3">
             <div class="card skill-thumbnail">
